@@ -1,41 +1,66 @@
-### 🧪 Project Highlights
----
+<h2 align="center">🧪 Project Highlights</h2>
+
+<p align="center">
+  <a href="https://github.com/SaberPendragonn"><b>← Go Back to Main Portfolio</b></a>
+</p>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td width="50%" valign="top" style="padding: 10px;">
-      <div align="center" style="border: 1px solid #30363d; border-radius: 10px; padding: 15px; background: #0d1117; min-height: 460px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 12px; padding: 20px; background: #0d1117;">
         <img src="https://img.shields.io/badge/-Windows%20Server-0078D4?style=for-the-badge&logo=windows-server&logoColor=white" />
-        <h3 align="center">🖧 Enterprise AD Lab</h3>
-        <p align="center"><i>Domain Controller & GPO Orchestration</i></p>
-        <hr size="1" color="#30363d">
-        <a href="INSERT_LINK_HERE">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHR3Z3d6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKSjP307T00N1Yc/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d; margin: 10px 0;"/>
+        <br><br>
+        <a href="INSERT_LINK">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKMGpx9uHstT904/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
         </a>
-        <p align="center" style="font-size: 14px; color: #8b949e;">
-          Full Active Directory deployment featuring automated User/Group management, DNS/DHCP integration, and restricted GPO environments.
-          <br><br>
-          <a href="INSERT_LINK_HERE"><b>🔎 View Lab Documentation</b></a>
+        <p style="font-size: 14px; color: #8b949e; min-height: 60px; margin: 15px 0; line-height: 1.5;">
+          <b>Enterprise AD Lab:</b> Full Domain Controller deployment with automated DNS/DHCP and hardened Group Policy orchestration.
         </p>
+        <a href="INSERT_LINK"><b>🔎 View Lab →</b></a>
       </div>
     </td>
 
     <td width="50%" valign="top" style="padding: 10px;">
-      <div align="center" style="border: 1px solid #30363d; border-radius: 10px; padding: 15px; background: #0d1117; min-height: 460px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 12px; padding: 20px; background: #0d1117;">
         <img src="https://img.shields.io/badge/-MikroTik-EE3A43?style=for-the-badge&logo=mikrotik&logoColor=white" />
-        <h3 align="center">🌐 Multi-Site Routing</h3>
-        <p align="center"><i>OSPF + BGP + Site-to-Site VPN</i></p>
-        <hr size="1" color="#30363d">
-        <a href="INSERT_LINK_HERE">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHR3Z3d6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/l41lTfuxB7T6zW304/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d; margin: 10px 0;"/>
+        <br><br>
+        <a href="INSERT_LINK">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/l41lTfuxB7T6zW304/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
         </a>
-        <p align="center" style="font-size: 14px; color: #8b949e;">
-          Designed enterprise topology with inter-VLAN routing, OSPF dynamic paths, and secure tunnels using MikroTik RouterOS and GNS3.
-          <br><br>
-          <a href="INSERT_LINK_HERE"><b>🔎 View Lab Documentation</b></a>
+        <p style="font-size: 14px; color: #8b949e; min-height: 60px; margin: 15px 0; line-height: 1.5;">
+          <b>Multi-Site Routing:</b> Engineered OSPF/BGP topologies with VLAN segmentation and secure site-to-site VPN tunnels.
         </p>
+        <a href="INSERT_LINK"><b>🔎 View Lab →</b></a>
       </div>
     </td>
   </tr>
-  
-  </table>
+  <tr>
+    <td width="50%" valign="top" style="padding: 10px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 12px; padding: 20px; background: #0d1117;">
+        <img src="https://img.shields.io/badge/-Security-232F3E?style=for-the-badge&logo=fortinet&logoColor=white" />
+        <br><br>
+        <a href="INSERT_LINK">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKSjP307T00N1Yc/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
+        </a>
+        <p style="font-size: 14px; color: #8b949e; min-height: 60px; margin: 15px 0; line-height: 1.5;">
+          <b>Network Security:</b> Perimeter defense implementation using Firewall filtering, NAT policies, and strict ACL enforcement.
+        </p>
+        <a href="INSERT_LINK"><b>🔎 View Lab →</b></a>
+      </div>
+    </td>
+
+    <td width="50%" valign="top" style="padding: 10px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 12px; padding: 20px; background: #0d1117;">
+        <img src="https://img.shields.io/badge/-Virtualization-607078?style=for-the-badge&logo=vmware&logoColor=white" />
+        <br><br>
+        <a href="INSERT_LINK">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/xT9C25UNTwfZuk85oc/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d;" />
+        </a>
+        <p style="font-size: 14px; color: #8b949e; min-height: 60px; margin: 15px 0; line-height: 1.5;">
+          <b>HA Virtualization:</b> Deployed VMware ESXi clusters featuring high-availability failover and disaster recovery testing.
+        </p>
+        <a href="INSERT_LINK"><b>🔎 View Lab →</b></a>
+      </div>
+    </td>
+  </tr>
+</table>
