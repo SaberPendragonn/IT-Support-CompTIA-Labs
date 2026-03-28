@@ -1,82 +1,72 @@
-# 🖥️ IT Support & CompTIA Labs
+## 🧪 Project Highlights
 
-This repository contains hands-on labs based on real-world IT support scenarios, aligned with CompTIA A+ and ITF+ certification topics. These include Windows and Linux troubleshooting, system administration, Office 365 configuration, Active Directory, remote tools, and basic scripting.
-
-All labs are built and tested using virtualized environments, with step-by-step documentation, screenshots, and sample commands to simulate helpdesk, technician, and sysadmin roles.
-
----
-
-## 🧪 Featured Labs
-
-### 🧩 [Windows 10/11 System Troubleshooting](https://github.com/yourusername/it-win10-troubleshooting-lab)  
-Simulate software crashes, driver rollbacks, system restore, Windows Repair mode, and Event Viewer analysis.
-
-### 🛠️ [User Management with Active Directory](https://github.com/yourusername/it-active-directory-lab)  
-Create users, groups, OUs, apply group policies, and set permissions using GUI and PowerShell.
-
-### 🧭 [Office 365 & Outlook Configuration](https://github.com/yourusername/it-office365-outlook-lab)  
-Add custom domains, create accounts, connect to Outlook, manage mailboxes and retention settings.
-
-### 📂 [File & Printer Sharing](https://github.com/yourusername/it-file-printer-sharing-lab)  
-Set shared folders, network discovery, NTFS vs Share permissions, and map network drives.
-
-### 🔒 [User Permissions and File Access Control](https://github.com/yourusername/it-permissions-lab)  
-Set up read/write/modify access, local group policies, and restrict access with ACLs.
-
-### 💡 [Linux Terminal & System Management](https://github.com/yourusername/it-linux-cli-lab)  
-Create users, update packages, manage services, configure DNS, and use `chmod`, `chown`, `systemctl`.
-
-### 🔧 [Remote Support via RDP and Helpdesk Tools](https://github.com/yourusername/it-remote-support-lab)  
-Simulate remote sessions via RDP, use Sysinternals Tools, and troubleshoot via command line.
-
-### ⚙️ [PowerShell for IT Admins](https://github.com/yourusername/it-powershell-lab)  
-Automate user creation, loop through computers, fetch system info, and deploy scheduled tasks.
-
----
-
-## 🧰 Tools Used
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Windows%2010/11-blue?style=flat&logo=windows&logoColor=white" />
-  <img src="https://img.shields.io/badge/Active%20Directory-003366?style=flat&logo=microsoft&logoColor=white" />
-  <img src="https://img.shields.io/badge/PowerShell-012456?style=flat&logo=powershell&logoColor=white" />
-  <img src="https://img.shields.io/badge/Linux-000000?style=flat&logo=linux&logoColor=white" />
-  <img src="https://img.shields.io/badge/Outlook-0072C6?style=flat&logo=microsoftoutlook&logoColor=white" />
-  <img src="https://img.shields.io/badge/VMware-607078?style=flat&logo=vmware&logoColor=white" />
-  <img src="https://img.shields.io/badge/VirtualBox-183A61?style=flat&logo=virtualbox&logoColor=white" />
-</p>
-
----
-
-## 📘 Lab Format
-
-Each lab includes:
-
-- 🛠️ Setup and goal overview
-- 🔑 Key commands or configurations
-- 🖼️ Screenshots and visual steps
-- 🧠 Notes and troubleshooting tips
-
----
-
-## 🎯 Certifications Aligned
-
-- ✅ CompTIA A+  
-- ✅ CompTIA ITF+  
-- 📍 Mapped to real-world job tasks in helpdesk, desktop support, and system admin roles
-
----
-
-## 🔗 Related Projects
-
-- 📡 [MikroTik Networking Labs »](https://github.com/yourusername/MikroTik-Networking-Labs)
-
----
-
-## 🚀 Coming Soon
-
-- Helpdesk Ticket Simulation using Spiceworks/Zendesk  
-- Scheduled Backups using Windows Task Scheduler  
-- Linux User and Permission Troubleshooting Scenarios  
-
----
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" valign="top" style="padding: 10px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 10px; padding: 15px; background: #0d1117; min-height: 480px;">
+        <img src="https://img.shields.io/badge/-Windows%20Server-0078D4?style=for-the-badge&logo=windows-server&logoColor=white" />
+        <h3 align="center">🖧 Enterprise AD Lab</h3>
+        <p align="center"><i>Domain Controller & GPO Orchestration</i></p>
+        <hr size="1" color="#30363d">
+        <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKMGpx9uHstT904/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d; margin: 10px 0;" alt="AD Lab"/>
+        </a>
+        <p align="center" style="font-size: 14px; color: #8b949e;">
+          Full Active Directory deployment featuring automated User/Group management, DNS/DHCP integration, and restricted GPO environments for enterprise-grade security.
+          <br><br>
+          <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio"><b>🔎 View Lab Documentation</b></a>
+        </p>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="padding: 10px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 10px; padding: 15px; background: #0d1117; min-height: 480px;">
+        <img src="https://img.shields.io/badge/-MikroTik-EE3A43?style=for-the-badge&logo=mikrotik&logoColor=white" />
+        <h3 align="center">🌐 Multi-Site Routing</h3>
+        <p align="center"><i>OSPF + BGP + Site-to-Site VPN</i></p>
+        <hr size="1" color="#30363d">
+        <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/l41lTfuxB7T6zW304/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d; margin: 10px 0;" alt="Routing Lab"/>
+        </a>
+        <p align="center" style="font-size: 14px; color: #8b949e;">
+          Designed complex network topologies with inter-VLAN routing, OSPF dynamic paths, and secure tunnels using MikroTik RouterOS and GNS3 simulations.
+          <br><br>
+          <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio"><b>🔎 View Lab Documentation</b></a>
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" style="padding: 10px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 10px; padding: 15px; background: #0d1117; min-height: 480px;">
+        <img src="https://img.shields.io/badge/-Infrastructure-232F3E?style=for-the-badge&logo=fortinet&logoColor=white" />
+        <h3 align="center">🔐 Network Security Lab</h3>
+        <p align="center"><i>Firewall Hardening & ACLs</i></p>
+        <hr size="1" color="#30363d">
+        <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKSjP307T00N1Yc/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d; margin: 10px 0;" alt="Security Lab"/>
+        </a>
+        <p align="center" style="font-size: 14px; color: #8b949e;">
+          Implemented robust perimeter defense using NAT policies, firewall filter rules, and Access Control Lists to prevent unauthorized access and network sniffing.
+          <br><br>
+          <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio"><b>🔎 View Lab Documentation</b></a>
+        </p>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="padding: 10px;">
+      <div align="center" style="border: 1px solid #30363d; border-radius: 10px; padding: 15px; background: #0d1117; min-height: 480px;">
+        <img src="https://img.shields.io/badge/-Virtualization-607078?style=for-the-badge&logo=vmware&logoColor=white" />
+        <h3 align="center">🖥 Virtualization Lab</h3>
+        <p align="center"><i>HA Clusters & ESXi Management</i></p>
+        <hr size="1" color="#30363d">
+        <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/xT9C25UNTwfZuk85oc/giphy.gif" width="100%" style="border-radius: 8px; border: 1px solid #30363d; margin: 10px 0;" alt="Virtualization Lab"/>
+        </a>
+        <p align="center" style="font-size: 14px; color: #8b949e;">
+          Configured Type-1 hypervisors to test failover clustering, high availability, and disaster recovery scenarios for business-critical server roles.
+          <br><br>
+          <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio"><b>🔎 View Lab Documentation</b></a>
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
