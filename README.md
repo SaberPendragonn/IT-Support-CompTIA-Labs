@@ -46,3 +46,15 @@
     </td>
   </tr>
 </table>
+
+<br>
+
+<div align="center">
+  <p style="font-size: 15px; color: #8b949e; max-width: 800px;">
+    Explore the detailed documentation and architectural diagrams for the 
+    <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio" style="color: #58a6ff; text-decoration: none;"><b>Active Directory Lab</b></a>, 
+    the <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio" style="color: #58a6ff; text-decoration: none;"><b>Multi-Site Routing</b></a> setup, 
+    and my <a href="https://github.com/SaberPendragonn/network-and-systems-portfolio" style="color: #58a6ff; text-decoration: none;"><b>Security & Virtualization</b></a> implementations. 
+    Each repository contains full configuration files and step-by-step deployment guides.
+  </p>
+</div>
