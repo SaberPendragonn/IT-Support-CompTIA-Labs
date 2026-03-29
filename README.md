@@ -12,9 +12,10 @@
         <a href="#" target="_blank">
           <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKMGpx9uHstT904/giphy.gif" width="100%" style="border-radius: 8px;" />
         </a>
-        <p style="font-size: 14px; color: #8b949e; margin-top: 15px;">
+        <p style="font-size: 14px; color: #8b949e; margin-top: 15px; margin-bottom: 5px;">
           <b>Enterprise AD Lab:</b> Automated provisioning with DNS/DHCP and hardened GPO configurations.
         </p>
+        <a href="#" target="_blank" style="font-size: 13px; color: #58a6ff; text-decoration: none;">🔗 View Full Lab →</a>
       </div>
     </td>
     <td width="50%" valign="top" style="padding: 10px;">
@@ -22,9 +23,10 @@
         <a href="#" target="_blank">
           <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/l41lTfuxB7T6zW304/giphy.gif" width="100%" style="border-radius: 8px;" />
         </a>
-        <p style="font-size: 14px; color: #8b949e; margin-top: 15px;">
+        <p style="font-size: 14px; color: #8b949e; margin-top: 15px; margin-bottom: 5px;">
           <b>Multi-Site Routing:</b> Dynamic OSPF/BGP network topologies with secure site-to-site VPN tunnels.
         </p>
+        <a href="#" target="_blank" style="font-size: 13px; color: #58a6ff; text-decoration: none;">🔗 View Full Lab →</a>
       </div>
     </td>
   </tr>
@@ -34,9 +36,10 @@
         <a href="#" target="_blank">
           <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKSjP307T00N1Yc/giphy.gif" width="100%" style="border-radius: 8px;" />
         </a>
-        <p style="font-size: 14px; color: #8b949e; margin-top: 15px;">
+        <p style="font-size: 14px; color: #8b949e; margin-top: 15px; margin-bottom: 5px;">
           <b>Network Security Lab:</b> Firewall filtering, NAT policies, and ACL enforcement for traffic isolation.
         </p>
+        <a href="#" target="_blank" style="font-size: 13px; color: #58a6ff; text-decoration: none;">🔗 View Full Lab →</a>
       </div>
     </td>
     <td width="50%" valign="top" style="padding: 10px;">
@@ -44,9 +47,10 @@
         <a href="#" target="_blank">
           <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/xT9C25UNTwfZuk85oc/giphy.gif" width="100%" style="border-radius: 8px;" />
         </a>
-        <p style="font-size: 14px; color: #8b949e; margin-top: 15px;">
+        <p style="font-size: 14px; color: #8b949e; margin-top: 15px; margin-bottom: 5px;">
           <b>Virtualization Lab:</b> VMware ESXi high-availability clusters with disaster recovery simulation.
         </p>
+        <a href="#" target="_blank" style="font-size: 13px; color: #58a6ff; text-decoration: none;">🔗 View Full Lab →</a>
       </div>
     </td>
   </tr>
