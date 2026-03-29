@@ -1,95 +1,69 @@
-<!-- ===================== PROJECT HIGHLIGHTS ===================== -->
-<h2 align="center">🧪 Project Highlights</h2>
+<h2 align="center" style="margin-bottom: 16px; margin-top: 0; font-weight: 600; letter-spacing: -0.3px;">Project Highlights</h2>
 
-<p align="center" style="max-width: 600px; margin: 0 auto 32px; color: #555;">
-  <!-- EDIT: Description -->
-  Hands-on infrastructure and security labs showcasing enterprise design, automation, and troubleshooting.
+<p align="center" style="font-size: 16px; color: #555; margin-bottom: 48px; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.5;">
+  <!-- You can change this description later -->
+  A selection of hands-on infrastructure and security labs demonstrating enterprise-level design, automation, and troubleshooting.
 </p>
 
-<!-- ===================== PROJECT GRID ===================== -->
-<table width="100%">
-  
-  <tr>
-    <!-- ===== PROJECT CARD START ===== -->
-    <td width="50%" align="center" valign="top" style="padding: 16px;">
-      <!-- EDIT: Project Link -->
-      <a href="#" target="_blank">
-        <!-- EDIT: GIF / Thumbnail -->
-        <img src="YOUR_GIF_LINK_HERE" width="100%" style="border-radius: 10px;" />
-      </a>
-
-      <!-- EDIT: Title -->
-      <p><b>Enterprise Active Directory Lab</b></p>
-
-      <!-- EDIT: Description -->
-      <p style="font-size: 14px; color: #555; max-width: 90%;">
-        Automated provisioning with DNS/DHCP and hardened GPO configurations.
-      </p>
-
-      <a href="#">View project →</a>
-    </td>
-    <!-- ===== PROJECT CARD END ===== -->
-
-    <td width="50%" align="center" valign="top" style="padding: 16px;">
-      <a href="#" target="_blank">
-        <img src="YOUR_GIF_LINK_HERE" width="100%" style="border-radius: 10px;" />
-      </a>
-
-      <p><b>Multi-Site Routing</b></p>
-
-      <p style="font-size: 14px; color: #555; max-width: 90%;">
-        Dynamic OSPF/BGP with secure site-to-site VPN tunnels.
-      </p>
-
-      <a href="#">View project →</a>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="50%" align="center" valign="top" style="padding: 16px;">
-      <a href="#" target="_blank">
-        <img src="YOUR_GIF_LINK_HERE" width="100%" style="border-radius: 10px;" />
-      </a>
-
-      <p><b>Network Security Lab</b></p>
-
-      <p style="font-size: 14px; color: #555; max-width: 90%;">
-        Firewall filtering, NAT policies, and ACL enforcement.
-      </p>
-
-      <a href="#">View project →</a>
-    </td>
-
-    <td width="50%" align="center" valign="top" style="padding: 16px;">
-      <a href="#" target="_blank">
-        <img src="YOUR_GIF_LINK_HERE" width="100%" style="border-radius: 10px;" />
-      </a>
-
-      <p><b>Virtualization & High Availability</b></p>
-
-      <p style="font-size: 14px; color: #555; max-width: 90%;">
-        VMware ESXi clusters with disaster recovery simulation.
-      </p>
-
-      <a href="#">View project →</a>
-    </td>
-  </tr>
-
-</table>
-
-<!-- ===================== HOW TO SCALE ===================== -->
-<!--
-✔ Copy ONE <td>...</td> block to create a new project
-✔ Always keep 2 projects per <tr> (row)
-✔ For more projects, add a new <tr> like:
-
-<tr>
-  <td>PROJECT</td>
-  <td>PROJECT</td>
-</tr>
-
-✔ Replace:
-- YOUR_GIF_LINK_HERE → demo GIF
-- # → your repo link
-- Title + description → your project details
--->
+<table width="100%" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td width="50%" valign="top" style="padding: 20px; border: none;">
+      <div align="center">
+        <a href="#" target="_blank" style="display: block; line-height: 0;">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKMGpx9uHstT904/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
+        </a>
+        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
+          Enterprise Active Directory Lab
+        </p>
+        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
+          Automated provisioning with DNS/DHCP and hardened GPO configurations.
+        </p>
+        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="padding: 20px; border: none;">
+      <div align="center">
+        <a href="#" target="_blank" style="display: block; line-height: 0;">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/l41lTfuxB7T6zW304/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
+        </a>
+        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
+          Multi-Site Routing
+        </p>
+        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
+          Dynamic OSPF/BGP topologies with secure site-to-site VPN tunnels.
+        </p>
+        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
+      </div>
+    </td>
+   </tr>
+   <tr>
+    <td width="50%" valign="top" style="padding: 20px; border: none;">
+      <div align="center">
+        <a href="#" target="_blank" style="display: block; line-height: 0;">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKSjP307T00N1Yc/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
+        </a>
+        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
+          Network Security Lab
+        </p>
+        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
+          Firewall filtering, NAT policies, and ACL enforcement for traffic isolation.
+        </p>
+        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
+      </div>
+    </td>
+    <td width="50%" valign="top" style="padding: 20px; border: none;">
+      <div align="center">
+        <a href="#" target="_blank" style="display: block; line-height: 0;">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/xT9C25UNTwfZuk85oc/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
+        </a>
+        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
+          Virtualization & High Availability
+        </p>
+        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
+          VMware ESXi clusters with disaster recovery simulation.
+        </p>
+        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
+      </div>
+    </td>
+   </tr>
+</table> improve the spacing and make the markdown concise also i need this markdown to be scalable overtime i will add more projects put comments where should i start where to put gifs etc
