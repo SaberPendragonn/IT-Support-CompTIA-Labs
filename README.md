@@ -1,4 +1,47 @@
+# VPN Performance Benchmark: WireGuard vs L2TP/IPsec vs OpenVPN
+### *My Second Project as a Network Engineer*
 
+---
+
+## Topology
+
+**Client PC** → **hAP Lite (VPN Client)** → **RB951/2 (VPN Server)** → **Server PC**
+
+**IP Scheme:**
+- Client PC: 192.168.1.10
+- hAP Lite: 192.168.1.1 (Client) / 10.0.0.2 (VPN)
+- RB951/2: 10.0.0.1 (VPN) / 192.168.2.1 (Server)
+- Server PC: 192.168.2.10
+
+> I ran all three VPN protocols through the exact same path so the comparison would be fair.
+
+---
+
+## The Lore
+
+Okay so here's the scenario:
+
+I've got these small MikroTik routers—hAP Lite and RB951/2. Low-power hardware. The kind you'd throw in a small office or home lab.
+
+I needed to set up a VPN. But which protocol?
+
+WireGuard? L2TP/IPsec? OpenVPN?
+
+Everyone talks about security, but on low-end routers, **performance is the real question**. Will the CPU handle it? Will speeds drop? Will it be stable?
+
+I didn't want to guess. So I set up a lab and benchmarked all three.
+
+Same hardware. Same traffic. Same test.
+
+Here's what I found.
+
+---
+
+## The Baseline: No VPN
+
+First, I needed to know what these routers could do without any VPN overhead.
+
+**What I did:**
 **Baseline Results:**
 - Throughput: 10 Mbps
 - Latency: 3 ms
@@ -9,7 +52,7 @@ This was my reference point. Anything above this? Pure hardware limit. Anything 
 
 ---
 
-## 🧪 The Tests: Three VPN Protocols
+## The Tests: Three VPN Protocols
 
 I configured each VPN on the routers, then ran the same iperf3 and ping tests. Same parameters. Same duration. Just swapped the protocol.
 
@@ -19,7 +62,7 @@ I configured each VPN on the routers, then ran the same iperf3 and ping tests. S
 
 ---
 
-## 🔐 Protocol 1: L2TP/IPsec
+## Protocol 1: L2TP/IPsec
 
 First up, L2TP with IPsec. The "traditional" secure VPN.
 
@@ -35,7 +78,7 @@ It worked. Secure. Stable-ish. But the CPU was sweating.
 
 ---
 
-## 🔓 Protocol 2: OpenVPN
+## Protocol 2: OpenVPN
 
 Next, OpenVPN. Everyone uses it. Flexible. Lots of options.
 
@@ -53,7 +96,7 @@ This thing was struggling.
 
 ---
 
-## ⚡ Protocol 3: WireGuard
+## Protocol 3: WireGuard
 
 Finally, WireGuard. The new kid everyone's talking about.
 
@@ -69,7 +112,7 @@ Wait, what? Almost baseline speeds. Latency barely increased. CPU barely moved.
 
 ---
 
-## 📊 So What's the Difference?
+## So What's the Difference?
 
 **WireGuard:**
 - 9.5 Mbps throughput
@@ -93,7 +136,7 @@ Wait, what? Almost baseline speeds. Latency barely increased. CPU barely moved.
 
 ---
 
-## 🚧 Hiccups I Ran Into
+## Hiccups I Ran Into
 
 L2TP/IPsec took the longest to configure. IPsec policies, proposals, secrets—lots of moving parts.
 
@@ -103,7 +146,7 @@ WireGuard? Three lines of config on each router. That was it.
 
 ---
 
-## 💡 Final Thoughts
+## Final Thoughts
 
 These little routers are CPU-bound. Encryption isn't free. The protocol choice decides whether your VPN is usable or painful.
 
