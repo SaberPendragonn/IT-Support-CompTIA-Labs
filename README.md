@@ -1,69 +1,130 @@
-<h2 align="center" style="margin-bottom: 16px; margin-top: 0; font-weight: 600; letter-spacing: -0.3px;">Project Highlights</h2>
 
-<p align="center" style="font-size: 16px; color: #555; margin-bottom: 48px; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.5;">
-  <!-- You can change this description later -->
-  A selection of hands-on infrastructure and security labs demonstrating enterprise-level design, automation, and troubleshooting.
-</p>
+**Baseline Results:**
+- Throughput: 10 Mbps
+- Latency: 3 ms
+- Packet Loss: 0%
+- CPU Usage: 10%
 
-<table width="100%" style="border-collapse: collapse; border: none;">
-  <tr>
-    <td width="50%" valign="top" style="padding: 20px; border: none;">
-      <div align="center">
-        <a href="#" target="_blank" style="display: block; line-height: 0;">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKMGpx9uHstT904/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
-        </a>
-        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
-          Enterprise Active Directory Lab
-        </p>
-        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
-          Automated provisioning with DNS/DHCP and hardened GPO configurations.
-        </p>
-        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
-      </div>
-    </td>
-    <td width="50%" valign="top" style="padding: 20px; border: none;">
-      <div align="center">
-        <a href="#" target="_blank" style="display: block; line-height: 0;">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/l41lTfuxB7T6zW304/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
-        </a>
-        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
-          Multi-Site Routing
-        </p>
-        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
-          Dynamic OSPF/BGP topologies with secure site-to-site VPN tunnels.
-        </p>
-        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
-      </div>
-    </td>
-   </tr>
-   <tr>
-    <td width="50%" valign="top" style="padding: 20px; border: none;">
-      <div align="center">
-        <a href="#" target="_blank" style="display: block; line-height: 0;">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/3o7TKSjP307T00N1Yc/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
-        </a>
-        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
-          Network Security Lab
-        </p>
-        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
-          Firewall filtering, NAT policies, and ACL enforcement for traffic isolation.
-        </p>
-        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
-      </div>
-    </td>
-    <td width="50%" valign="top" style="padding: 20px; border: none;">
-      <div align="center">
-        <a href="#" target="_blank" style="display: block; line-height: 0;">
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueXN6Znd4ZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzRyeHByZzEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/xT9C25UNTwfZuk85oc/giphy.gif" width="100%" style="border-radius: 8px; display: block;" />
-        </a>
-        <p style="font-size: 16px; color: #1a1a1a; margin-top: 20px; margin-bottom: 8px; font-weight: 600;">
-          Virtualization & High Availability
-        </p>
-        <p style="font-size: 14px; color: #555; margin-top: 0; margin-bottom: 14px; line-height: 1.5; max-width: 90%;">
-          VMware ESXi clusters with disaster recovery simulation.
-        </p>
-        <a href="#" target="_blank" style="font-size: 14px; color: #0366d6; text-decoration: none; font-weight: 500;">View project →</a>
-      </div>
-    </td>
-   </tr>
-</table>
+This was my reference point. Anything above this? Pure hardware limit. Anything below? VPN overhead.
+
+---
+
+## 🧪 The Tests: Three VPN Protocols
+
+I configured each VPN on the routers, then ran the same iperf3 and ping tests. Same parameters. Same duration. Just swapped the protocol.
+
+**Why 10 Mbps?** Safe load for these little routers. Enough to stress the CPU without crashing it.
+**Why 60 seconds?** Long enough to catch any instability.
+**Why ping -c 50?** Shows latency patterns, not just one lucky packet.
+
+---
+
+## 🔐 Protocol 1: L2TP/IPsec
+
+First up, L2TP with IPsec. The "traditional" secure VPN.
+
+**What I saw:**
+- Throughput: 6.8 Mbps
+- Latency: 15 ms
+- Packet Loss: 1.2%
+- CPU Usage: 60%
+
+It worked. Secure. Stable-ish. But the CPU was sweating.
+
+![L2TP CPU Monitor](https://YOUR-IMAGE-HOST.com/cpu_l2tp.png)
+
+---
+
+## 🔓 Protocol 2: OpenVPN
+
+Next, OpenVPN. Everyone uses it. Flexible. Lots of options.
+
+**What I saw:**
+- Throughput: 4.2 Mbps
+- Latency: 30 ms
+- Packet Loss: 3.5%
+- CPU Usage: 85%
+
+Ouch. The CPU was pinned. Speeds dropped hard. Packet loss creeping up.
+
+![OpenVPN Ping Test](https://YOUR-IMAGE-HOST.com/ping_openvpn.png)
+
+This thing was struggling.
+
+---
+
+## ⚡ Protocol 3: WireGuard
+
+Finally, WireGuard. The new kid everyone's talking about.
+
+**What I saw:**
+- Throughput: 9.5 Mbps
+- Latency: 8 ms
+- Packet Loss: 0.5%
+- CPU Usage: 25%
+
+Wait, what? Almost baseline speeds. Latency barely increased. CPU barely moved.
+
+![WireGuard iperf3](https://YOUR-IMAGE-HOST.com/iperf_wireguard.png)
+
+---
+
+## 📊 So What's the Difference?
+
+**WireGuard:**
+- 9.5 Mbps throughput
+- 8 ms latency
+- 25% CPU
+- Efficient. Lightweight. Just works.
+
+**L2TP/IPsec:**
+- 6.8 Mbps throughput
+- 15 ms latency
+- 60% CPU
+- Secure, but heavy.
+
+**OpenVPN:**
+- 4.2 Mbps throughput
+- 30 ms latency
+- 85% CPU
+- Too heavy for low-power hardware.
+
+![Throughput Comparison](https://YOUR-IMAGE-HOST.com/throughput-comparison.gif)
+
+---
+
+## 🚧 Hiccups I Ran Into
+
+L2TP/IPsec took the longest to configure. IPsec policies, proposals, secrets—lots of moving parts.
+
+OpenVPN was easier to set up but hit the CPU hard during testing. Actually saw packet loss above 5% during the first run. Had to re-test to confirm.
+
+WireGuard? Three lines of config on each router. That was it.
+
+---
+
+## 💡 Final Thoughts
+
+These little routers are CPU-bound. Encryption isn't free. The protocol choice decides whether your VPN is usable or painful.
+
+WireGuard delivered almost baseline speeds with 25% CPU. That's the winner for low-power hardware.
+
+L2TP/IPsec works if you need IPsec compatibility. But you're sacrificing throughput.
+
+OpenVPN? On these routers? No. The CPU can't keep up.
+
+**The Metric That Matters: CPU Efficiency**
+
+I measured CPU usage for each protocol under identical load. WireGuard used 25%. OpenVPN used 85%.
+
+**Why This Matters to an Employer:**
+
+If I'm deploying VPNs on low-power hardware, I'm not guessing. I benchmark. I measure throughput, latency, and CPU impact. I pick the protocol that actually works—not just the one everyone talks about.
+
+A 25% CPU VPN that delivers 9.5 Mbps vs an 85% CPU VPN that delivers 4.2 Mbps? That's the difference between a network that works and one that frustrates everyone.
+
+WireGuard wins. By a lot.
+
+---
+
+*Second project down. More to come.* 🔥
