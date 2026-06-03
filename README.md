@@ -101,6 +101,10 @@ Synthesized Spanning Tree port states with active PIM Assert mechanics. Proved d
 
 **What happened:** MSTP unblocked the Right Link for Instance 1. Core-B's timer expired, and it assumed the role of Active Querier. The client sent a fresh membership report up the newly opened Right Link. Core-B scanned its BSR directory, recognized Core-A as master RP, fired a PIM Join across the PtP link. Stream recovered with less than 2.1 seconds of stutter.
 
+
+
+
+
 **The win:** Sub-second failover. User barely noticed.
 
 ![Failover Recovery](https://YOUR-IMAGE-HOST.com/multicast-failover.gif)
