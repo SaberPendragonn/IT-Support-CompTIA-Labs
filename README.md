@@ -1,7 +1,7 @@
-# 📡 Enterprise Multicast Routing: IGMP Snooping + PIM-SM
-### *My Fifth Project as a Network Engineer*
+# 📡 CCTV Stream Multicast Routing: IGMP Snooping + PIM-SM
+### *My Seventh Project as a Network Engineer*
 
-> One stream to rule them all. No duplicates. No flooding.
+> One stream from the camera. Thousands of viewers. Zero duplicates.
 
 ---
 
@@ -13,7 +13,7 @@
 
 **Distribution & Access Layer:** Triple Layer 2 access switches multi-homed via redundant uplinks to both core nodes, forming an active-active physical topology partitioned by Multiple Spanning Tree Protocol (MSTP).
 
-**Multicast Routing & Control Stack:** Protocol Independent Multicast - Sparse Mode (PIM-SM) with split Rendezvous Points (RP), independent Bootstrap Router (BSR) domains, and hardware-accelerated IGMP Snooping.
+**Multicast Routing & Control Stack:** Protocol Independent Multicast - Sparse Mode (PIM-SM) with split Rendezvous Points (RP), independent Bootstrap Router (BSR) domains, and IGMP Snooping.
 
 ---
 
@@ -21,19 +21,20 @@
 
 Okay so here's the scenario:
 
-I've got a 10Mbps IPTV feed on VLAN 10 (239.1.1.1) and a security camera matrix on VLAN 20 (239.2.2.2). Users across VLANs 10 through 70 need to pull either stream.
+I've got a 256kbps CCTV feed on VLAN 10 (239.1.1.1). Corporate compliance says users in any segment—VLANs 10 through 70—must be able to pull either stream.
 
 Standard unicast routing? Each streaming server generates a separate stream for every single client. Server NICs choke. Backplane saturates. It's a disaster.
 
-Multicast solves that. One stream from the server. The network replicates it only where needed.
+Multicast fixes that. One stream from the server. The network replicates it only where needed.
 
 But here's the catch:
 
 My access switches are cross-connected to both cores. MSTP partitions VLANs to prevent loops:
-- **MSTI 1 (Core-A Root):** VLANs 10, 30, 50, 70 → Left links active
-- **MSTI 2 (Core-B Root):** VLANs 20, 40, 60 → Right links active
 
-The danger? A client on VLAN 30 requests the VLAN 10 stream. Their traffic travels up the Left Link (MSTP says so). If my IGMP Querier or PIM Rendezvous Point is blindly configured on Core-B, control packets fight the Spanning Tree blocks. Asymmetric routing loops. Packet fragmentation. Silent stream drops.
+- **MSTP Instance 1 (Core-A Root):** VLANs 10, 30, 50, 70 → Left links active and forwarding
+- **MSTP Instance 2 (Core-B Root):** VLANs 20, 40, 60 → Right links active and forwarding
+
+The danger? A client on VLAN 30 requests the VLAN 10 stream. Their traffic travels up the Left Link (MSTP says so). If my IGMP Querier or PIM Rendezvous Point is blindly configured on Core-B, control packets fight the Spanning Tree blocks.
 
 I needed every layer to agree on the same path.
 
@@ -41,85 +42,83 @@ I needed every layer to agree on the same path.
 
 ## 🛠️ Performance Highlights
 
-**MSTP-Aligned Control Path Optimization**  
-Re-engineered Layer 3 IP configurations across all core interfaces to align IGMP Querier election outcomes with physical MSTP topology roots. Eliminated asymmetric cross-link transit penalties.
-
 **Distributed Core Load Balancing**  
-Configured split BSR and static RP domain partitions across the dual core backbone. Segmented group pools (239.1.0.0/16 and 239.2.0.0/16) to distribute cryptographic and state processing overhead symmetrically.
+Configured split BSR and static RP domain partitions across the dual core backbone. Segmented group pools (239.1.0.0/16 and 239.2.0.0/16) to distribute processing overhead symmetrically. For this demonstration we only use 239.1.1.1/32
 
-**Symmetric Inter-VLAN Multicast Translation**  
-Orchestrated hardware-level cross-subnet packet replication at the core Layer 3 boundaries. Permitted secure, seamless stream traversal from source pools into all corporate user segments (VLANs 10-70).
+**Targeted Switch IGMP Snooping**  
+Enforced hardware-level Layer 2 IGMP snooping verification across separate physical access units. Validated precise, non-flooded port distribution of 10 Mbps stream payloads to designated active subscribers.
 
-**Sub-Second Topology Failover Recovery**  
-Synthesized Spanning Tree port states with active PIM Assert mechanics. Proved dynamic, sub-second failover traffic migration across the core PtP link when a primary access uplink is severed.
+**Resilient Infrastructure Topology Failover**  
+Proved automated multicast stream recovery across redundant switch paths within a strict sub-15-second convergence window during catastrophic primary physical link failure.
 
-![Multicast Routing Demo](https://github.com/user-attachments/assets/0a27f1f6-234f-4fe4-9e7e-617283c09e23)
+![Multicast Architecture Demo](https://github.com/user-attachments/assets/0a27f1f6-234f-4fe4-9e7e-617283c09e23)
 
 ---
 
 ## 🧪 The Proof: Validation Tests
 
-### Test 1: Router Interface Traffic Multiplication
+### Test 1: Switch Port Traffic Capture and Selective Hardware Delivery
 
-**What I did:** Started a single 10 Mbps IPTV stream (239.1.1.1) from a source host on VLAN 10. Opened active media players on two clients—one on VLAN 10, one on VLAN 20.
+**What I did:** Initiated a single 256kbps CCTV multicast feed (239.1.1.1) inside VLAN 10. Ran active MikroTik Torch packet captures on explicit physical interfaces across Access-Switch-1, Access-Switch-2, and Access-Switch-3 to track ingress and egress stream behavior.
 
-**What happened:** The streaming server's port maintained exactly 10 Mbps. No extra load. Core-A replicated packets internally to bridge the subnets. Interface statistics showed 20 Mbps total—10 Mbps on the VLAN 10 egress, 10 Mbps on the VLAN 20 egress.
+**What happened:** Torch metrics confirmed highly isolated hardware delivery. No broadcast leakage.
 
-**The win:** One stream in. Two streams out. No duplicate server load.
+- **SW1 (ether1):** Registered clean ~256kbps ingress stream directly from source streaming server inside VLAN 10
+- **SW2 (ether1):** Captured ~256kbps egress throughput routing out to active streaming client terminal
+- **SW3 (ether1):** Captured ~256kbps egress throughput pushing exclusively to second designated streaming client endpoint
 
-![Traffic Multiplication](https://YOUR-IMAGE-HOST.com/multicast-replication.gif)
+**The win:** All unjoined ports across the triple switch fabric remained at 0 bps. IGMP Snooping successfully contained high-bandwidth media traffic to intended endpoints.
 
----
-
-### Test 2: Switch Port Pruning (No Flooding)
-
-**What I did:** Initiated simultaneous 10 Mbps multicast distributions across the switch fabric while running a traffic monitor on an unjoined quiet switch port.
-
-**What happened:** The access switch parsed IGMP membership rules. The unjoined workstation port recorded 0 bps of multicast leakage. Switches dropped media frames to un-subscribed nodes.
-
-**The win:** No broadcast flood. Clean backplane.
-
-![Switch Pruning](https://YOUR-IMAGE-HOST.com/igmp-snooping.png)
+![Switch Port Capture](https://YOUR-IMAGE-HOST.com/switch-torch.gif)
 
 ---
 
-### Test 3: Shared Tree to Shortest Path Tree (SPT) Transition
+### Test 2: Redundant Link Failure Recovery and Convergence Delay
 
-**What I did:** Opened an IPTV stream from a workstation on VLAN 60 (MSTP rooted to Core-B). Audited the multicast routing table state flags.
+**What I did:** Severed the active physical Left Link on the access layer switch while clients were streaming the 10 Mbps IPTV feed. Measured total system recovery time before video stream recovered on destination monitors.
 
-**What happened:** Initially flagged a *.G Shared Tree entry reaching out to Core-A (primary RP for 239.1.0.0/16). Within sub-100 milliseconds, the routing table executed an automated SPT switchover. State transitioned to explicit (S,G) identifier (10.10.10.50, 239.1.1.1). Traffic pulled directly over the high-speed PtP shortcut.
+**What happened:**
 
-**The win:** Optimal path. No unnecessary backbone hops.
+| Run | Failover Time |
+|-----|---------------|
+| Run 1 | 4.0 seconds |
+| Run 2 | 12.0 seconds |
+| Run 3 | 13.0 seconds |
 
-![SPT Transition](https://YOUR-IMAGE-HOST.com/pim-spt.gif)
+**Architectural Root Cause:** Failover successfully stayed under 15 seconds. But convergence is bottlenecked by native state timeout mechanisms of MSTP and VRRP. The system relies on standard dead timers and background advertisements to detect dead peers.
+
+**Recommendation:** Convergence times can be reduced to a lot by shifting Layer 3 core out of static VRRP tracking and deploying dynamic routing protocols (OSPF or BGP) coupled with BFD to instantly tear down and rebuild path topology upon link loss.
+
+![Link Failover](https://YOUR-IMAGE-HOST.com/failover-test.gif)
 
 ---
 
-### Test 4: Link Failure Recovery
+### Test 3: Cross-VLAN Multicast Inter-Subnet Routing
 
-**What I did:** Severed the active Left Link on Access-Switch-1 while a client on VLAN 30 was viewing the IPTV stream.
+**What I did:** Attempted to configure multi-subnet multicast boundaries across the infrastructure. Goal was to allow a media host on VLAN 30 to ingest raw media streams broadcasting from server pool on VLAN 10.
 
-**What happened:** MSTP unblocked the Right Link for Instance 1. Core-B's timer expired, and it assumed the role of Active Querier. The client sent a fresh membership report up the newly opened Right Link. Core-B scanned its BSR directory, recognized Core-A as master RP, fired a PIM Join across the PtP link. Stream recovered with less than 2.1 seconds of stutter.
+**What happened:** [PENDING / KNOWN CONFIGURATION CONSTRAINT]
 
+Cross-subnet multicast routing remains pending due to a hardware-offloading limitation in the MikroTik CRS3xx/CRS5xx switch-chip architecture.
 
+**The technical limitation:** The underlying hardware ASIC bridge matrix does not natively support hardware-accelerated IGMP snooping translation across differing VLAN IDs without forcing traffic up into the primary system CPU. Forcing heavy 10 Mbps streams into software processing risks severe CPU exhaustion and packet breakdown.
 
+**Status:** This test remains paused until MikroTik releases an updated RouterOS v7 firmware branch that addresses cross-VLAN hardware offloading for this switch-chip tier.
 
+ https://forum.mikrotik.com/t/multicast-across-switches-does-not-work-crs3xx/173251/16 
 
-**The win:** Sub-second failover. User barely noticed.
-
-![Failover Recovery](https://YOUR-IMAGE-HOST.com/multicast-failover.gif)
 
 ---
 
 ## 🚧 Engineering Challenges
 
-**The Asymmetric RPF Block**
+**The Asymmetric Reverse Path Forwarding (RPF) Block**
 
 Initial cross-VLAN streaming failed completely. Clients sent Join requests. No video arrived. Logs showed hundreds of "PIM RPF lookup failed" errors.
 
 **Why it happened:** Multicast routers perform an RPF sanity check. When a packet arrives, the router checks if that interface is the fastest way back to the source. With active-active paths, packets took one uplink but the router expected them on the other. Security drop.
 
-**How I solved it:** Synchronized unicast routing metrics. Tuned PIM interface costs across both core routers. Forced Layer 3 return paths to perfectly mirror the physical infrastructure.
+**How I solved it:** Synchronized unicast routing metrics. Tuned PIM interface costs across both core routers. Forced Layer 3 return paths to perfectly mirror the physical infrastructure layout.
 
 **The Multi-Switch Snooping Breakdown**
 
@@ -127,7 +126,7 @@ Clients on Access-Switch-1 worked perfectly. Clients on Access-Switch-3? Random 
 
 **Why it happened:** In a multi-switch environment, IGMP Snooping needs a single clear destination pointer. Switches didn't know where the multicast router lived.
 
-**How I solved it:** Manually defined Multicast Router Ports (Mrouter) on all three switch bridges. Pinned them directly to upstream trunk interfaces leading to the Core Routers. Unified snooping databases across the entire switch mesh.
+**How I solved it:** Manually defined Multicast Router Ports (Mrouter) on all three switch bridges. Pinned them directly to upstream trunk interfaces leading to the Core Routers. Unified snooping databases across the entire switch mesh. Rock-solid port pruning.
 
 ---
 
@@ -137,27 +136,18 @@ Multicast in a redundant, multi-VLAN topology is the ultimate test of an enginee
 
 Allowing high-bandwidth video streams to blindly flood an enterprise network like broadcast noise? That's a junior oversight. It kills wireless arrays. Wastes backplane resources.
 
-Architecting PIM-SM across dual upstream cores with hardware-offloaded IGMP Snooping across a triple switch mesh? That's **real infrastructure engineering**.
+Architecting PIM-SM across dual upstream cores with hardware-offloaded IGMP Snooping across a triple switch mesh? That's **true infrastructure engineering**.
 
 You have to:
-- Map the packet life cycle across routing tables
+- Map packet lifecycle across routing tables
 - Manage dynamic interface registration
 - Build a self-pruning distribution pipeline that handles massive media transits efficiently
 
 **The Metric That Matters: Backplane Cleanliness**
 
-I observed the bridge monitor tables across the switch stack during peak streaming hours. Heavy video streams flowed with laser precision only to clients who asked for them. The rest of the enterprise infrastructure stayed completely quiet.
+I observed bridge monitor tables across the switch stack during peak streaming hours. Heavy video streams flowed with laser precision only to clients who asked for them. The rest of the enterprise infrastructure stayed completely quiet.
 
-**Why This Matters to an Employer:**
-
-Most engineers can turn on multicast. Few can make it work in a redundant, multi-VLAN, active-active topology where every layer is fighting for control.
-
-I made Layer 2 and Layer 3 agree on the same paths. No RPF drops. No flooding. No asymmetric loops. Sub-second failover.
-
-When I deploy multicast, your network doesn't choke. Your switches don't flood. Your users get their streams. Clean. Fast. Efficient.
-
-That's the difference between multicast "working" and multicast being enterprise-ready.
 
 ---
 
-*Fifth project down. More to come.* 🔥
+*Seventh project down. More to come.* 🔥
